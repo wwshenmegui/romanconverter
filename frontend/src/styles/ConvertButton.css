@@ -1,0 +1,17 @@
+.convert-button-light {
+    background-color: #007aff; /* Light theme primary color */
+    color: white;
+}
+
+.convert-button-dark {
+    background-color: #ff9800; /* Dark theme primary color */
+    color: black;
+}
+
+.convert-button-light:hover {
+    background-color: #005bb5;
+}
+
+.convert-button-dark:hover {
+    background-color: #ff7b00;
+}
