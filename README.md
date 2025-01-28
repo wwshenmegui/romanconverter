@@ -136,6 +136,7 @@ romanconverter/
 │   ├── src/               # Backend implementation
 │   │   ├── routes/        # API routes
 │   │   ├── services/      # Business logic
+│   │   ├── utils/         # utility functions (e.g. logger)
 │   │   └── server.js      # Entry point for backend server
 │   │
 │   ├── tests/             # Backend tests
@@ -196,6 +197,16 @@ The backend is built with Node.js and Express.js, and it utilizes the following 
 - Description: Provides high-level HTTP assertions for testing APIs.
 - Purpose: Enables integration testing of backend routes.
 
+6. winston
+
+- Description: Winston is a popular logging library for Node.js that allows structured logging with multiple transport options (console, file, external services).
+- Purpose: It helps developers capture, format, and persist logs efficiently. It supports log levels, timestamping, JSON formatting, and integration with logging platforms like Logstash, AWS CloudWatch, and more.
+
+7. prom-client
+
+- Description: prom-client is a Prometheus client library for Node.js that enables applications to expose real-time metrics.
+- Purpose: It helps monitor application performance by tracking HTTP requests, response times, error rates, and custom metrics, which can be visualized in Prometheus/Grafana.
+
 ## Frontend
 
 The frontend is built with React and Adobe React Spectrum for a modern, accessible, and styled user interface. The following dependencies are used:
@@ -224,3 +235,10 @@ The frontend is built with React and Adobe React Spectrum for a modern, accessib
 
 - Description: JavaScript testing framework.
 - Purpose: Runs frontend tests alongside React Testing Library.
+
+# Devops
+
+Currently this project includes these devops capabilities
+- healthcheck endpoint (/health) to check the health of server. This is to check whether the server is running or disconnected
+- logging. This project has logging in backend logic including APIs
+- Metrics. Right now we have a metric for the total number of requests. Hitting /metrics endpoint and you will see the metric info. This can be further polished by adding more metrics or visualizing them in Grafana. 
