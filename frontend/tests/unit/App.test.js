@@ -5,7 +5,7 @@ test('renders RomanConverterApp and handles conversion', async () => {
     global.fetch = jest.fn(() =>
         Promise.resolve({
             ok: true,
-            json: () => Promise.resolve({ roman: 'X' }),
+            json: () => Promise.resolve({ "output": 'X' }),
         })
     );
 
@@ -17,7 +17,7 @@ test('renders RomanConverterApp and handles conversion', async () => {
     fireEvent.change(input, { target: { value: '10' } });
     fireEvent.click(button);
 
-    const result = await screen.findByText("X");
+    const result = await screen.findByText("Roman numeral: X");
     expect(result).toBeInTheDocument();
 
     global.fetch.mockRestore();

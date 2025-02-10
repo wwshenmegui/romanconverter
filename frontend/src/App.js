@@ -33,7 +33,7 @@ const RomanConverterApp = () => {
             const data = await response.json();
 
             if (response.ok) {
-                setRomanNumeral(data.roman);
+                setRomanNumeral(data["output"]);
             } else {
                 setRomanNumeral(data.error || "Error converting number.");
             }

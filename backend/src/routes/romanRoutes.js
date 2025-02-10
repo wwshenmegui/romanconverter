@@ -22,7 +22,7 @@ router.get('/romannumeral', (req, res) => {
 
     const romanNumeral = integerToRoman(num);
     logger.info(`Converted ${num} to ${romanNumeral}`);
-    res.json({ input: num.toString(), roman: romanNumeral });
+    res.json({ "input": num.toString(), "output": romanNumeral });
 });
 
 // health check to monitor server status

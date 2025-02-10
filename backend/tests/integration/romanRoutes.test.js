@@ -10,7 +10,7 @@ describe('Integration Tests for /romannumeral Endpoint', () => {
     test('Should return a valid Roman numeral for a valid input', async () => {
         const response = await request(app).get('/romannumeral?query=10');
         expect(response.status).toBe(200);
-        expect(response.body).toEqual({ input: '10', roman: 'X' });
+        expect(response.body).toEqual({ input: '10', output: 'X' });
     });
 
     test('Should handle invalid or missing query parameters', async () => {
@@ -40,6 +40,6 @@ describe('Integration Tests for /romannumeral Endpoint', () => {
     test('Should return a valid Roman numeral for the maximum allowed input', async () => {
         const response = await request(app).get('/romannumeral?query=3999');
         expect(response.status).toBe(200);
-        expect(response.body).toEqual({ input: '3999', roman: 'MMMCMXCIX' });
+        expect(response.body).toEqual({ input: '3999', output: 'MMMCMXCIX' });
     });
 });

@@ -5,7 +5,7 @@ test('integration test for Roman numeral conversion', async () => {
     global.fetch = jest.fn(() =>
         Promise.resolve({
             ok: true,
-            json: () => Promise.resolve({ roman: 'XV' }),
+            json: () => Promise.resolve({ "output": 'XV' }),
         })
     );
 
@@ -20,7 +20,7 @@ test('integration test for Roman numeral conversion', async () => {
     fireEvent.click(button);
 
     // Verify the output
-    const result = await screen.findByText("XV");
+    const result = await screen.findByText("Roman numeral: XV");
     expect(result).toBeInTheDocument();
 
     global.fetch.mockRestore();

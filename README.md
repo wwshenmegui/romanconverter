@@ -4,13 +4,14 @@
 
 This app is a web application which will convert an integer ranging from 1-3999 to its corresponding Roman numeric. For example, when you type 3000 in the input field and click the button, the web page will output MMM as the corresponding Roman numeric. 
 
-This project completed extension 1 and 2. Extension 3 is in progress
+This project completed extension 1, 2 and 3.
 
 # How to build and run the app
 
 ## Prerequisites
 
-Node.js (v16 or higher): [Download and install Node.js](https://nodejs.org/en)
+- Node.js (v16 or higher): [Download and install Node.js](https://nodejs.org/en)
+- Docker (recommended): [Download and install Docker](https://www.docker.com/products/docker-desktop/)
 
 ## Setup Instructions
 
@@ -21,6 +22,9 @@ cd romanconverter
 ```
 
 2. Install dependencies
+
+Note: You can skip this step and step 3 if you choose running applications on Docker containers and just go to step 4
+
 ```
 cd <project_root_dir>/backend
 npm install
@@ -40,6 +44,17 @@ npm install
     cd <project_root_dir>/frontend
     npm start
     ```
+
+4. Running application on Docker
+
+Make sure Docker is correctly installed. Run these commands to run applications on Docker container.
+
+```
+cd romanconverter
+docker-compose up --build
+```
+
+After the application is built and running on the Docker, navigate to http://localhost:3000/ and you will see the frontend page.
 
 ## Run Tests
 
