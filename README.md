@@ -70,6 +70,25 @@ cd <project_root_dir>/frontend
 npm test
 ```
 
+## End-to-end test
+
+To run end-to-end testing from starting on a frontend page to interact with backend, follow these steps:
+
+1. Install cypress
+
+```
+cd e2e-tests
+npm install
+```
+
+2. Run cypress
+
+```
+npm run open
+```
+
+It will pop up a page on setting up cypress. Follow instruction to setup end-to-end testing. 
+
 
 # Engineering and Testing Methodology
 
